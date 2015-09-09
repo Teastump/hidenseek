@@ -1,0 +1,1628 @@
+Initialize engine version: 5.1.2f1 (afd2369b692a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon R9 200 / HD 7900 Series (ID=0x6798)
+    Vendor:   ATI
+    VRAM:     3051 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: A:\UnityProjects\HideNSeek\networktest_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading A:\UnityProjects\HideNSeek\networktest_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: A:\UnityProjects\HideNSeek\networktest_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading A:\UnityProjects\HideNSeek\networktest_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: A:\UnityProjects\HideNSeek\networktest_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading A:\UnityProjects\HideNSeek\networktest_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: A:\UnityProjects\HideNSeek\networktest_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading A:\UnityProjects\HideNSeek\networktest_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: A:\UnityProjects\HideNSeek\networktest_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading A:\UnityProjects\HideNSeek\networktest_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: A:\UnityProjects\HideNSeek\networktest_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading A:\UnityProjects\HideNSeek\networktest_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+Platform assembly: A:\UnityProjects\HideNSeek\networktest_Data\Managed\Photon3Unity3D.dll (this message is harmless)
+Loading A:\UnityProjects\HideNSeek\networktest_Data\Managed\Photon3Unity3D.dll into Unity Child Domain
+- Completed reload, in  0.246 seconds
+desktop: 1920x1080 144Hz; virtual: 1920x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+Platform assembly: A:\UnityProjects\HideNSeek\networktest_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: A:\UnityProjects\HideNSeek\networktest_Data\Managed\System.dll (this message is harmless)
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: ad2c -> priority: 1 
+  Thread -> id: 1f0b0 -> priority: 1 
+UserId sent: Treestump
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Connected to Room
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+The observed monobehaviour (NetworkManager) of this PhotonView does not implement OnPhotonSerializeView()!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+The observed monobehaviour (Lobby) of this PhotonView does not implement OnPhotonSerializeView()!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at UnityEngine.UI.Toggle.Set (Boolean value, Boolean sendCallback) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Toggle.Set (Boolean value) [0x00000] in <filename unknown>:0 
+  at UnityEngine.UI.Toggle.set_isOn (Boolean value) [0x00000] in <filename unknown>:0 
+  at Lobby.RPCReady (.PhotonPlayer player, Boolean status) [0x00000] in <filename unknown>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in <filename unknown>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in <filename unknown>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.ExecuteRpc (ExitGames.Client.Photon.Hashtable rpcData, .PhotonPlayer sender) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OnEvent (ExitGames.Client.Photon.EventData photonEvent) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PeerBase.DeserializeMessageAndCallback (System.Byte[] inBuff) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.DispatchIncomingCommands () [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PhotonPeer.DispatchIncomingCommands () [0x00000] in <filename unknown>:0 
+  at PhotonHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Shader 'Nature/Terrain/Specular': fallback shader 'Nature/Terrain/Diffuse' not found
+Shader 'Nature/Terrain/Standard': fallback shader 'Nature/Terrain/Diffuse' not found
+UnloadTime: 5.453104 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 686.
+Total: 0.860758 ms (FindLiveObjects: 0.048344 ms CreateObjectMapping: 0.030592 ms MarkObjects: 0.558605 ms  DeleteObjects: 0.222082 ms)
+
+1 Players Loaded
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1f0f4 -> priority: 1 
+  Thread -> id: 1e778 -> priority: 1 
+2 Players Loaded
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1 Players Spawned
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+2 Players Spawned
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerController.OnPhotonSerializeView (.PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in <filename unknown>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in <filename unknown>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.ExecuteComponentOnSerialize (UnityEngine.Component component, .PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at PhotonView.DeserializeComponent (UnityEngine.Component component, .PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at PhotonView.DeserializeView (.PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OnSerializeRead (ExitGames.Client.Photon.Hashtable data, .PhotonPlayer sender, Int32 networkTime, Int16 correctPrefix) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OnEvent (ExitGames.Client.Photon.EventData photonEvent) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PeerBase.DeserializeMessageAndCallback (System.Byte[] inBuff) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.DispatchIncomingCommands () [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PhotonPeer.DispatchIncomingCommands () [0x00000] in <filename unknown>:0 
+  at PhotonHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Player took 50 damage.
+Current health: 50.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Player died, removing from player list
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Player took 50 damage.
+Current health: 0.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Monster wins!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Game restarting in 5...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Game should have restarted...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.435226 ms
+
+Unloading 35 unused Assets to reduce memory usage. Loaded Objects now: 698.
+Total: 0.836208 ms (FindLiveObjects: 0.058164 ms CreateObjectMapping: 0.032859 ms MarkObjects: 0.490998 ms  DeleteObjects: 0.253430 ms)
+
+1 Players Loaded
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Received OnSerialization for view ID 2001. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Received OnSerialization for view ID 2001. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Received OnSerialization for view ID 2001. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Received OnSerialization for view ID 2001. We have no such PhotonView! Ignored this if you're leaving a room. State: Joined
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+2 Players Loaded
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1 Players Spawned
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+2 Players Spawned
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerController.OnPhotonSerializeView (.PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in <filename unknown>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in <filename unknown>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.ExecuteComponentOnSerialize (UnityEngine.Component component, .PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at PhotonView.DeserializeComponent (UnityEngine.Component component, .PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at PhotonView.DeserializeView (.PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OnSerializeRead (ExitGames.Client.Photon.Hashtable data, .PhotonPlayer sender, Int32 networkTime, Int16 correctPrefix) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OnEvent (ExitGames.Client.Photon.EventData photonEvent) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PeerBase.DeserializeMessageAndCallback (System.Byte[] inBuff) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.DispatchIncomingCommands () [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PhotonPeer.DispatchIncomingCommands () [0x00000] in <filename unknown>:0 
+  at PhotonHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Humans win!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Game restarting in 5...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Game should have restarted...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.157623 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 698.
+Total: 1.457132 ms (FindLiveObjects: 0.081958 ms CreateObjectMapping: 0.061563 ms MarkObjects: 0.991816 ms  DeleteObjects: 0.320659 ms)
+
+1 Players Loaded
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+2 Players Loaded
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1 Players Spawned
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+2 Players Spawned
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerController.OnPhotonSerializeView (.PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in <filename unknown>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in <filename unknown>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.ExecuteComponentOnSerialize (UnityEngine.Component component, .PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at PhotonView.DeserializeComponent (UnityEngine.Component component, .PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at PhotonView.DeserializeView (.PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OnSerializeRead (ExitGames.Client.Photon.Hashtable data, .PhotonPlayer sender, Int32 networkTime, Int16 correctPrefix) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OnEvent (ExitGames.Client.Photon.EventData photonEvent) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PeerBase.DeserializeMessageAndCallback (System.Byte[] inBuff) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.DispatchIncomingCommands () [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PhotonPeer.DispatchIncomingCommands () [0x00000] in <filename unknown>:0 
+  at PhotonHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Player took 50 damage.
+Current health: 50.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Player died, removing from player list
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Player took 50 damage.
+Current health: 0.
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Monster wins!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Game restarting in 5...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Game should have restarted...
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.055269 ms
+
+Unloading 13 unused Assets to reduce memory usage. Loaded Objects now: 698.
+Total: 1.812917 ms (FindLiveObjects: 0.168072 ms CreateObjectMapping: 0.051743 ms MarkObjects: 1.323429 ms  DeleteObjects: 0.267783 ms)
+
+1 Players Loaded
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+2 Players Loaded
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+1 Players Spawned
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+2 Players Spawned
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at PlayerController.OnPhotonSerializeView (.PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at (wrapper managed-to-native) System.Reflection.MonoMethod:InternalInvoke (object,object[],System.Exception&)
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in <filename unknown>:0 
+Rethrow as TargetInvocationException: Exception has been thrown by the target of an invocation.
+  at System.Reflection.MonoMethod.Invoke (System.Object obj, BindingFlags invokeAttr, System.Reflection.Binder binder, System.Object[] parameters, System.Globalization.CultureInfo culture) [0x00000] in <filename unknown>:0 
+  at System.Reflection.MethodBase.Invoke (System.Object obj, System.Object[] parameters) [0x00000] in <filename unknown>:0 
+  at PhotonView.ExecuteComponentOnSerialize (UnityEngine.Component component, .PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at PhotonView.DeserializeComponent (UnityEngine.Component component, .PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at PhotonView.DeserializeView (.PhotonStream stream, .PhotonMessageInfo info) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OnSerializeRead (ExitGames.Client.Photon.Hashtable data, .PhotonPlayer sender, Int32 networkTime, Int16 correctPrefix) [0x00000] in <filename unknown>:0 
+  at NetworkingPeer.OnEvent (ExitGames.Client.Photon.EventData photonEvent) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PeerBase.DeserializeMessageAndCallback (System.Byte[] inBuff) [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.EnetPeer.DispatchIncomingCommands () [0x00000] in <filename unknown>:0 
+  at ExitGames.Client.Photon.PhotonPeer.DispatchIncomingCommands () [0x00000] in <filename unknown>:0 
+  at PhotonHandler.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException: Object reference not set to an instance of an object
+  at NetworkManager.OnPhotonPlayerDisconnected (.PhotonPlayer other) [0x00000] in <filename unknown>:0 
+UnityEngine.GameObject:SendMessage(String, Object, SendMessageOptions)
+NetworkingPeer:SendMonoMessage(PhotonNetworkingMessage, Object[])
+NetworkingPeer:HandleEventLeave(Int32, EventData)
+NetworkingPeer:OnEvent(EventData)
+ExitGames.Client.Photon.PeerBase:DeserializeMessageAndCallback(Byte[])
+ExitGames.Client.Photon.EnetPeer:DispatchIncomingCommands()
+ExitGames.Client.Photon.PhotonPeer:DispatchIncomingCommands()
+PhotonHandler:Update()
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+NullReferenceException
+  at (wrapper managed-to-native) UnityEngine.GameObject:GetComponentFastPath (System.Type,intptr)
+  at UnityEngine.GameObject.GetComponent[HumanController] () [0x00000] in <filename unknown>:0 
+  at GameController.Update () [0x00000] in <filename unknown>:0 
+ 
+(Filename:  Line: -1)
+
+Left Room
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 65)
+
