@@ -12,6 +12,7 @@ public class GameController : MonoBehaviour {
 	public Light playerAmbientLight;
 	public Text timeLimitLabel;
 	public HUDController hud;
+	public GameMenu menu;
 
 	public bool isMonster
 	{
@@ -30,9 +31,9 @@ public class GameController : MonoBehaviour {
 			}
 			else
 			{
-				RenderSettings.ambientIntensity = 1f;
-				RenderSettings.reflectionIntensity = 1f;
-				playerAmbientLight.enabled = true;
+				RenderSettings.ambientIntensity = 0f;
+				RenderSettings.reflectionIntensity = 0f;
+				playerAmbientLight.enabled = false;
 			}
 		}
 	}
@@ -64,6 +65,9 @@ public class GameController : MonoBehaviour {
 	}
 	private GameObject _player = null;
 	
+	private List<SpawnPoint> monsterSpawns = new List<SpawnPoint>();
+	private List<SpawnPoint> humanSpawns = new List<SpawnPoint>();
+	
 	private List<GameObject> players = new List<GameObject>();
 	private float timeLimit;
 	private float timer;
@@ -80,7 +84,6 @@ public class GameController : MonoBehaviour {
 			Destroy (gameObject);
 		}
 		
-		GetPlayerList ();
 		timer = -1000f;
 		gameOver = true;
 	}
@@ -88,6 +91,7 @@ public class GameController : MonoBehaviour {
 	void Start()
 	{
 		NetworkManager.instance.LevelDidLoad ();
+		LockCursor ();
 	}
 	
 	public void GetPlayer()
@@ -117,36 +121,25 @@ public class GameController : MonoBehaviour {
 		gameOver = false;
 	}
 	
-	/*
-	public void SetFlashlights()
-	{
-		GetPlayerList ();
-		if (isMonster)
-		{
-			foreach (GameObject player in players)
-			{
-				if (player != myPlayer)
-					player.GetComponentInChildren<Light>().enabled = false;
-			}
-		}
-	}
-	*/
-	
 	public void SpawnPlayer(GameObject playerPrefab)
 	{
+		SplitSpawnPoints();
+		List<SpawnPoint> spawnList;
 		
-		int rand = Random.Range (0, spawnPoints.Length);
+		if (playerPrefab.GetComponent<MonsterController>() != null)
+			spawnList = monsterSpawns;
+		else
+			spawnList = humanSpawns;
+		
+		int rand = Random.Range (0, spawnList.Count);
 		int index = rand;
 		
 		do
 		{
-			SpawnPoint spawnPoint = spawnPoints[index];
+			SpawnPoint spawnPoint = spawnList[index];
 			Transform point;
 			
-			if (playerPrefab.GetComponent<MonsterController> () != null)
-				point = spawnPoint.GetValidSpawn (SpawnPoint.SpawnType.Monster);
-			else
-				point = spawnPoint.GetValidSpawn (SpawnPoint.SpawnType.Human);
+			point = spawnPoint.GetValidSpawn(SpawnPoint.SpawnType.Both);
 				
 			if (point != null)
 			{
@@ -156,7 +149,7 @@ public class GameController : MonoBehaviour {
 			}
 			
 			++index;
-			if (index >= spawnPoints.Length)
+			if (index >= spawnList.Count)
 			{
 				index = 0;
 			}
@@ -165,22 +158,48 @@ public class GameController : MonoBehaviour {
 		Debug.Log ("Not enough spawn points on the map! Failed to spawn player");
 	}
 	
-	public void StartTimer(float timeLimit)
+	void SplitSpawnPoints()
 	{
-		this.timeLimit = timeLimit * 60f;
+		foreach (SpawnPoint spawnPoint in spawnPoints)
+		{
+			if (spawnPoint.spawnType == SpawnPoint.SpawnType.Both)
+			{
+				monsterSpawns.Add (spawnPoint);
+				humanSpawns.Add (spawnPoint);
+			}
+			else if (spawnPoint.spawnType == SpawnPoint.SpawnType.Human)
+			{
+				humanSpawns.Add (spawnPoint);
+			}
+			else
+			{
+				monsterSpawns.Add (spawnPoint);
+			}
+		}
+	}
+	
+	public void StartTimer(float limit)
+	{
+		timeLimit = limit * 60f;
 		timer = 0f;
 	}
 	
 	// Update is called once per frame
 	void Update () 
 	{
+		if (Input.GetButtonDown ("Cancel"))
+		{
+			Debug.Log ("Escape pressed, value of menu game object: " + menu.gameObject.activeSelf);
+			ShowMenu (!menu.gameObject.activeSelf);
+		}
+	
 		if (!gameOver)
 		{
 			timer += Time.deltaTime;
 		
-			float timeRemaining = timeLimit - timer;
+			float timeRemaining = timeLimit - timer + 1f;
 		
-			timeLimitLabel.text = "Time Remaining: " + (Mathf.Floor (timeRemaining / 60f)).ToString ("F0") + ":" + (timeRemaining % 60f).ToString ("00");
+			timeLimitLabel.text = "Time Remaining: " + (Mathf.Floor ((timeRemaining) / 60f)).ToString ("F0") + ":" + Mathf.Floor (timeRemaining % 60f).ToString ("00");
 		
 			if (timer >= timeLimit)
 			{
@@ -188,7 +207,7 @@ public class GameController : MonoBehaviour {
 			}
 			foreach (GameObject player in players)
 			{
-				if (player.GetComponent<HumanController> () != null)
+				if (player != null && player.GetComponent<HumanController> () != null)
 				{
 					return;
 				}
@@ -232,5 +251,45 @@ public class GameController : MonoBehaviour {
 		Debug.Log ("Game should have restarted...");
 		
 		NetworkManager.instance.RestartGame ();
+	}
+	
+	void OnApplicationFocus(bool focusStatus)
+	{
+		Debug.Log ("Application focus switched");
+		if (focusStatus)
+		{
+			Debug.Log ("Cursor should lock");
+			LockCursor ();
+		}
+		else
+		{
+			Debug.Log ("Cursor should unlock");
+			UnlockCursor ();
+		}
+	}
+	
+	void LockCursor()
+	{
+		Cursor.lockState = CursorLockMode.Locked;
+		Cursor.visible = false;
+		myPlayer.GetComponent<PlayerController>().paused = false;
+	}
+	
+	void UnlockCursor()
+	{
+		Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
+		myPlayer.GetComponent<PlayerController>().paused = true;
+	}
+	
+	public void ShowMenu(bool value)
+	{
+		if (value)
+			UnlockCursor ();
+		else
+			LockCursor ();
+			
+		menu.gameObject.SetActive (value);
+		hud.gameObject.SetActive (!value);
 	}
 }

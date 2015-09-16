@@ -5,13 +5,29 @@ public class SoundSource : MonoBehaviour {
 
 	public Light monsterLightSource;
 	public float decaySpeed;
-	
-	//private bool bIsValid = false;
+	public AudioClip[] sounds;
+	public AudioSource audioSource;
 
 	public void Init(float strength)
 	{
-		monsterLightSource.intensity = strength;
-		//bIsValid = true;
+		if (!GameController.instance.isMonster)
+		{
+			monsterLightSource.enabled = false;
+		}
+		else
+		{
+			monsterLightSource.intensity = strength;
+		}
+		
+		float distance = (GameController.instance.myPlayer.transform.position - transform.position).magnitude;
+		
+		audioSource.PlayOneShot(GetRandomAudioClip(), (strength * 2) / (distance + 4f));
+	}
+	
+	AudioClip GetRandomAudioClip()
+	{
+		int rand = Random.Range (0, sounds.Length);
+		return sounds[rand];
 	}
 	
 	// Update is called once per frame
@@ -21,7 +37,7 @@ public class SoundSource : MonoBehaviour {
 		{
 			monsterLightSource.range = Mathf.Lerp (monsterLightSource.range, 0f, decaySpeed);
 		}
-		else //if (bIsValid)
+		else
 		{
 			Destroy (gameObject);
 		}

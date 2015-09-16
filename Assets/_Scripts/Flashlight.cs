@@ -6,7 +6,7 @@ public class Flashlight : MonoBehaviour {
 	public Light flashlight;
 
 	// Use this for initialization
-	void Awake () {
+	void Start () {
 		if (GameController.instance.isMonster)
 		{
 			Debug.Log ("Current Player is monster, turning off this player's lights");

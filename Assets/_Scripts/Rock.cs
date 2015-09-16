@@ -40,11 +40,17 @@ public class Rock : MonoBehaviour {
 		{
 			ContactPoint contact = coll.contacts[0];
 			Vector3 pos = contact.point + Vector3.up * 2;
+			
 		
-			if (GameController.instance.isMonster)
-			{
-				Instantiate (soundSource, pos, Quaternion.identity);
-			}
+			//if (GameController.instance.isMonster)
+			//{
+			GameObject rockSound = Instantiate (soundSource, pos, Quaternion.identity) as GameObject;
+			
+			SoundSource bounceSound = rockSound.GetComponent<SoundSource> ();
+			bounceSound.Init (coll.relativeVelocity.magnitude);
+			
+			Debug.Log ("Rock Collision Velocity: " + coll.relativeVelocity.magnitude);
+			//}
 		
 			++bounces;
 		}

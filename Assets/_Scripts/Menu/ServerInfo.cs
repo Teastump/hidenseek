@@ -44,11 +44,6 @@ public class ServerInfo : MonoBehaviour {
 		}
 
 		if (clicks >= 2)
-			NetworkManager.instance.JoinRoom (serverName.text, mapName.text);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+			NetworkManager.instance.JoinRoom (serverName.text);
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
+/*Lists all servers that can be connected to*/
 public class JoinServerPanel : MonoBehaviour {
 
 	public GameObject serverInfoObject;
@@ -11,10 +12,12 @@ public class JoinServerPanel : MonoBehaviour {
 	private List<GameObject> serverList = new List<GameObject>();
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+	{
 		serverCount = 0;
 	}
 
+	//Refreshes list of servers
 	public void RefreshRoomList(RoomInfo[] roomList)
 	{
 		ClearServerList ();
@@ -40,10 +43,6 @@ public class JoinServerPanel : MonoBehaviour {
 		}
 
 		serverList.Clear ();
-	}
-
-	// Update is called once per frame
-	void Update () {
-
+		serverCount = 0;
 	}
 }

@@ -32,19 +32,22 @@ public class MonsterController : PlayerController {
 	
 	void InputMonsterAction()
 	{
-		if (Input.GetButtonUp ("Fire2"))
+		if (!paused)
 		{
-			GameObject instance = Instantiate(pingLight, transform.position, transform.rotation) as GameObject;
-			instance.GetComponent<MonsterPing>().Init (UseAllStamina ());
-		}
-		
-		if (Input.GetButton ("Fire1"))
-		{
-			if (attackTimer >= attackSpeed && UseStamina (10f))
+			if (Input.GetButtonUp ("Monster Ping"))
 			{
-				attackTimer = 0f;
-				attack.Attack (damage);
-				Debug.Log ("Swipe!");
+				GameObject instance = Instantiate(pingLight, transform.position, transform.rotation) as GameObject;
+				instance.GetComponent<MonsterPing>().Init (UseAllStamina ());
+			}
+		
+			if (Input.GetButton ("Monster Attack"))
+			{
+				if (attackTimer >= attackSpeed && UseStamina (10f))
+				{
+					attackTimer = 0f;
+					attack.Attack (damage);
+					Debug.Log ("Swipe!");
+				}
 			}
 		}
 	}

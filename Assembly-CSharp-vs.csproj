@@ -112,6 +112,8 @@
      <Compile Include="Assets\_Scripts\HUD\HUDController.cs" />
      <Compile Include="Assets\_Scripts\HUD\HealthBar.cs" />
      <Compile Include="Assets\_Scripts\HUD\StaminaBar.cs" />
+     <Compile Include="Assets\_Scripts\Menu\DropdownMenu.cs" />
+     <Compile Include="Assets\_Scripts\Menu\GameMenu.cs" />
      <Compile Include="Assets\_Scripts\Menu\JoinServerPanel.cs" />
      <Compile Include="Assets\_Scripts\Menu\Lobby.cs" />
      <Compile Include="Assets\_Scripts\Menu\PlayerCard.cs" />
@@ -126,6 +128,7 @@
      <Compile Include="Assets\_Scripts\SoundSource.cs" />
      <None Include="Assets\Plugins\Photon3Unity3D.xml" />
      <None Include="Assets\Plugins\release_history.txt" />
+     <None Include="Assets\Raw Mocap Data\Animations\_CompleteAnimationList.txt" />
      <None Include="Assets\Photon Unity Networking\readme.txt" />
      <None Include="Assets\Photon Unity Networking\changelog.txt" />
  <Reference Include="UnityEngine.UI">

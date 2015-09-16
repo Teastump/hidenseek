@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class HUDController : MonoBehaviour {
 
 	public StaminaBar staminaBar;
 	public HealthBar healthBar;
+	public Image hurtFlash;
 	public PlayerController myPlayer
 	{
 		get { return _player; }
@@ -23,14 +25,18 @@ public class HUDController : MonoBehaviour {
 		}
 	}
 	private PlayerController _player;
-
-	// Use this for initialization
-	void Start () {
 	
+	private float flashSpeed = 5f;
+	
+	public void Hurt()
+	{
+		Color flashColor = new Color(1, 0, 0, 0.15f);
+		
+		hurtFlash.color = flashColor;
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
+	void Update()
+	{
+		hurtFlash.color = Color.Lerp (hurtFlash.color, Color.clear, flashSpeed * Time.deltaTime);
 	}
 }

@@ -3,15 +3,20 @@ using System.Collections;
 using System;
 using UnityEngine.UI;
 
+/*Class used to handle connecting to photon network and syncing clients for game start*/
 public class NetworkManager : Photon.MonoBehaviour {
 
-	static public NetworkManager instance;
+	static public NetworkManager instance; //Global instance
 
 	public GameObject playerPrefab;
 	public GameObject monsterPrefab;
+	public Text playerName;
 	public Text newServerName;
 	public JoinServerPanel serverPanel;
 	public Lobby lobby;
+	
+	public Button enterName;
+	public GameObject menuButtons;
 	
 	private bool playAsMonster = true;
 
@@ -24,6 +29,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 
 	void Awake()
 	{
+		//Creates singleton structure
 		if (instance == null) 
 		{
 			instance = this;
@@ -42,41 +48,61 @@ public class NetworkManager : Photon.MonoBehaviour {
 	void Start () 
 	{
 		PhotonNetwork.ConnectUsingSettings ("0.1");
-		PhotonNetwork.player.name = "Treestump";
+		
+		//If we are reloading from a map
+		if (PhotonNetwork.player.name != "")
+			ToggleEnterPlayerName();
+	}
+	
+	//Changes player name
+	public void ChangePlayerName()
+	{
+		PhotonNetwork.player.name = playerName.text;
+		ToggleEnterPlayerName();
+	}
+	
+	//Toggles between the Enter Player Name field and the main buttons
+	void ToggleEnterPlayerName()
+	{
+		enterName.gameObject.SetActive(!enterName.gameObject.activeSelf);
+		menuButtons.SetActive (!menuButtons.activeSelf);
+	}
+	
+	//Quits the application
+	public void Exit()
+	{
+		Application.Quit ();
 	}
 
+	//Creates a new room
 	public void CreateRoom()
 	{
-		if (newServerName.text == null || newServerName.text == "") return;
+		if (newServerName.text == null || newServerName.text == "") return; //If there's no text entered
 
-		RoomOptions optn = null;
+		
+		RoomOptions optn = new RoomOptions ();
+		optn.isOpen = true;
+		optn.isVisible = true;
+		optn.maxPlayers = 5;
+			
+		ExitGames.Client.Photon.Hashtable customProps = new ExitGames.Client.Photon.Hashtable();
+		customProps["map"] = "hs_forest";
+		optn.customRoomProperties = customProps;
+			
+		string[] exposedProps = new string[1];
+		exposedProps[0] = "map";
+			
+		optn.customRoomPropertiesForLobby = exposedProps;
+		
 
-		if (optn == null)
-		{
-			optn = new RoomOptions ();
-			optn.isOpen = true;
-			optn.isVisible = true;
-			optn.maxPlayers = 5;
-			
-			ExitGames.Client.Photon.Hashtable customProps = new ExitGames.Client.Photon.Hashtable();
-			customProps["map"] = "hs_forest";
-			optn.customRoomProperties = customProps;
-			
-			string[] exposedProps = new string[1];
-			exposedProps[0] = "map";
-			
-			optn.customRoomPropertiesForLobby = exposedProps;
-		}
-
-		PhotonNetwork.CreateRoom (newServerName.text, optn, TypedLobby.Default);
+		PhotonNetwork.CreateRoom (newServerName.text, optn, TypedLobby.Default); //Creates the room
 		
 		//PhotonNetwork.LoadLevel ("hs_test");
 	}
 
-	public void JoinRoom(string roomName, string mapName)
+	public void JoinRoom(string roomName)
 	{
 		PhotonNetwork.JoinRoom (roomName);
-		//PhotonNetwork.LoadLevel (mapName);
 	}
 	
 	public void LeaveRoom()
@@ -84,6 +110,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 		PhotonNetwork.LeaveRoom ();
 	}
 	
+	//Refreshes room list whenever a new one appears
 	void OnReceivedRoomListUpdate()
 	{
 		roomsList = PhotonNetwork.GetRoomList();
@@ -99,33 +126,26 @@ public class NetworkManager : Photon.MonoBehaviour {
 		}
 	}
 	
+	//Called when client joins a room
 	void OnJoinedRoom()
 	{
 		Debug.Log("Connected to Room");
 		
-		/*
-		if (playAsMonster)
-			selected = monsterPrefab;
-		else
-			selected = playerPrefab;
-		
-		PhotonNetwork.Instantiate (selected.name, Vector3.up * 5, Quaternion.identity, 0);
-		GameController.instance.GetPlayer ();
-		//GameController.instance.SetFlashlights ();
-		*/
-		
 		lobby.gameObject.SetActive (true);
 		
+		//Adds all players to the lobby list
 		foreach (PhotonPlayer player in PhotonNetwork.playerList)
 		{
 			lobby.AddPlayer (player);
 		}
 	}
 	
+	//Called when client leaves room
 	void OnLeftRoom()
 	{
 		Debug.Log ("Left Room");
 		
+		//Clears the lobby if still in the main menu
 		if (lobby != null)
 		{
 			lobby.gameObject.SetActive (false);
@@ -143,11 +163,13 @@ public class NetworkManager : Photon.MonoBehaviour {
 		lobby.RemovePlayer (other);
 	}
 	
+	//Toggles if the player is playing as a monster
 	public void ToggleMonster()
 	{
 		playAsMonster = !playAsMonster;
 	}
 	
+	//Starts the game if all players are ready
 	public void StartGame()
 	{
 		if (lobby.CheckReadyStatus ())
@@ -156,6 +178,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 		}
 	}
 	
+	//Called in a map once someone wins
 	public void RestartGame()
 	{
 		photonView.RPC ("RPCStart", PhotonTargets.All);
@@ -179,6 +202,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 			selected = playerPrefab;
 	}
 	
+	//Called by GameController once it has loaded into a level
 	public void LevelDidLoad()
 	{
 		photonView.RPC ("PlayerLoaded", PhotonTargets.All);
@@ -191,6 +215,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 		
 		Debug.Log (playersLoaded + " Players Loaded");
 		
+		//Once all players have loaded, spawn them and start the game timer
 		if (playersLoaded == PhotonNetwork.room.playerCount)
 		{
 			GameController.instance.SpawnPlayer (selected);
@@ -199,6 +224,7 @@ public class NetworkManager : Photon.MonoBehaviour {
 		}
 	}
 	
+	//Called after a player is spawned
 	public void PlayerSpawned()
 	{
 		photonView.RPC ("RPCPlayerSpawned", PhotonTargets.All);
@@ -211,14 +237,10 @@ public class NetworkManager : Photon.MonoBehaviour {
 		
 		Debug.Log (playersSpawned + " Players Spawned");
 		
+		//Once all players have been spawned into the level
 		if (playersSpawned == playersLoaded)
 		{
 			GameController.instance.GetPlayerList ();
 		}
-	}
-
-	// Update is called once per frame
-	void Update () {
-
 	}
 }

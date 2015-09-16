@@ -3,9 +3,10 @@ using System.Collections;
 
 public class PlayerController : Photon.MonoBehaviour
 {
-	public float maxGroundSpeed = 4f;
+	public float maxGroundSpeed = 3f;
 	public float sensitivity = 1f;
 	public Camera playerCamera;
+	[SerializeField] GameObject mesh;
 	
 	public float health
 	{
@@ -52,10 +53,18 @@ public class PlayerController : Photon.MonoBehaviour
 	
 	public float staminaRecoveryPause;
 	public float staminaRecoveryRate; //Percentage rate of recovery
+	
+	public bool paused
+	{
+		get { return _paused; }
+		set { _paused = value; }
+	}
+	private bool _paused;
 
 	protected Rigidbody rb;
 	protected float distToGround;
 	protected float velocity;
+	protected MeshRenderer renderer;
 
 	private float lastSynchronizationTime = 0f;
 	private float syncDelay = 0f;
@@ -75,10 +84,14 @@ public class PlayerController : Photon.MonoBehaviour
 	
 	private float timer = 0f;
 	private bool recovering = false;
+	private float downForce = 1f;
+	
+	protected Animator anim;
 
 	protected virtual void Start()
 	{
 		rb = GetComponent<Rigidbody> ();
+		anim = GetComponent<Animator> ();
 		
 		if (!photonView.isMine)
 		{
@@ -93,6 +106,7 @@ public class PlayerController : Photon.MonoBehaviour
 		stamina = maxStamina;
 		
 		distToGround = GetComponent<Collider>().bounds.extents.y;
+		renderer = GetComponent<MeshRenderer>();
 		
 		//hud = GameController.instance.hud;
 	}
@@ -104,12 +118,14 @@ public class PlayerController : Photon.MonoBehaviour
 			stream.SendNext (rb.position);
 			stream.SendNext (rb.velocity);
 			stream.SendNext (rb.rotation);
+			stream.SendNext (_stamina);
 		} 
 		else 
 		{
 			Vector3 syncPosition = (Vector3)stream.ReceiveNext ();
 			Vector3 syncVelocity = (Vector3)stream.ReceiveNext ();
 			Quaternion syncRotation = (Quaternion)stream.ReceiveNext ();
+			_stamina = (float) stream.ReceiveNext ();
 
 			velocity = syncVelocity.magnitude;
 
@@ -128,6 +144,7 @@ public class PlayerController : Photon.MonoBehaviour
 	{
 		if (photonView.isMine)
 		{
+			velocity = rb.velocity.magnitude;
 			InputMovement ();
 			InputRotation ();
 			StaminaRecovery ();
@@ -139,6 +156,8 @@ public class PlayerController : Photon.MonoBehaviour
 			
 			CheckRenderDistance ();
 		}
+		
+		Animate ();
 	}
 	
 	// Update is called once per frame
@@ -148,47 +167,37 @@ public class PlayerController : Photon.MonoBehaviour
 		{
 			stamina += (maxStamina * (staminaRecoveryRate / 100f) * Time.fixedDeltaTime);
 		}
+		
+		if (!IsGrounded ())
+		{
+			if (downForce < 1f) downForce += 5f * Time.fixedDeltaTime;
+			if (downForce > 1f) downForce = 1f;
+			
+			Vector3 downVelocity = rb.velocity;
+			downVelocity.y -= downForce;
+			rb.velocity = downVelocity;
+		}
 	}
 
 	protected void InputMovement()
 	{
-		/*
-		if (Input.GetKey(KeyCode.W))
-			rb.MovePosition(rb.position + transform.forward * speed * Time.deltaTime);
-		
-		if (Input.GetKey(KeyCode.S))
-			rb.MovePosition(rb.position - transform.forward * speed * Time.deltaTime);
-		
-		if (Input.GetKey(KeyCode.D))
-			rb.MovePosition(rb.position + transform.right * speed * Time.deltaTime);
-		
-		if (Input.GetKey(KeyCode.A))
-			rb.MovePosition(rb.position - transform.right * speed * Time.deltaTime);
-		*/
-		
-		if (IsGrounded ())
+		if (!paused)
 		{
-			float forward = 0f;
-			float side = 0f;
-		
-			if (Input.GetKey (KeyCode.W))
-				forward += 1f;
-			if (Input.GetKey (KeyCode.S))
-				forward -= 1f;
-			if (Input.GetKey (KeyCode.D))
-				side += 1f;
-			if (Input.GetKey (KeyCode.A))
-				side -= 1f;
+			float forward = Input.GetAxisRaw ("Vertical");
+			float side = Input.GetAxisRaw ("Horizontal");
 			
 			Vector3 moveDirNorm = ((transform.forward * forward) + (transform.right * side)).normalized;
 		
 			rb.velocity = MoveGround (moveDirNorm, rb.velocity);
-			//rb.MovePosition(rb.position + MoveGround (moveDirNorm, rb.velocity));
-				
-			if (Input.GetKeyUp (KeyCode.Space))
-				rb.AddForce (Vector3.up * 5, ForceMode.VelocityChange);
+		
+			if (IsGrounded ())
+			{		
+				if (Input.GetButtonUp ("Jump"))
+				{
+					Jump ();
+				}
+			}
 		}
-			
 	}
 
 	protected void SyncedMovement()
@@ -199,14 +208,16 @@ public class PlayerController : Photon.MonoBehaviour
 	
 	protected void InputRotation()
 	{
-		hRot = Input.GetAxis ("Mouse X") * sensitivity;
-		transform.Rotate (0f, hRot, 0f);
+		if (!paused)
+		{
+			hRot = Input.GetAxis ("Mouse X") * sensitivity;
+			transform.Rotate (0f, hRot, 0f);
+			
+			vRot -= Input.GetAxis ("Mouse Y") * sensitivity;
+			vRot = Mathf.Clamp(vRot, -verticalRange, verticalRange);
 		
-		vRot -= Input.GetAxis ("Mouse Y") * sensitivity;
-		vRot = Mathf.Clamp(vRot, -verticalRange, verticalRange);
-		
-		//Camera.main.transform.Rotate(vRot, 0f, 0f);
-		playerCamera.transform.localRotation = Quaternion.Euler(vRot, 0f, 0f);
+			playerCamera.transform.localRotation = Quaternion.Euler(vRot, 0f, 0f);
+		}
 	}
 	
 	protected void SyncedRotation()
@@ -216,7 +227,7 @@ public class PlayerController : Photon.MonoBehaviour
 	
 	protected bool IsGrounded()
 	{
-		return Physics.Raycast (transform.position, -Vector3.up, distToGround + 0.1f);
+		return Physics.Raycast (transform.position, -Vector3.up, 0.2f);
 	}
 	
 	private Vector3 Accelerate(Vector3 accelDir, Vector3 prevVelocity, float accelerate, float max_velocity)
@@ -249,16 +260,15 @@ public class PlayerController : Photon.MonoBehaviour
 	{
 		if (GameController.instance.isMonster)
 		{
-			MeshRenderer renderer = GetComponent<MeshRenderer>();
 			float distance = (GameController.instance.myPlayer.transform.position - transform.position).magnitude;
 			
 			if (distance > 40)
 			{
-				renderer.enabled = false;
+				mesh.SetActive (false);
 			}
 			else
 			{
-				renderer.enabled = true;
+				mesh.SetActive (true);
 			}
 			
 		}
@@ -274,12 +284,26 @@ public class PlayerController : Photon.MonoBehaviour
 	{
 		health -= damage;
 		Debug.Log ("Player took " + damage + " damage.\nCurrent health: " + health + ".");
+		
+		if (gameObject == GameController.instance.myPlayer)
+		{
+			hud.Hurt ();
+		}
 	}
 	
 	protected void Die()
 	{
 		GameController.instance.PlayerDied (gameObject);
 		Destroy (gameObject);
+	}
+	
+	void Jump()
+	{
+		Vector3 upVelocity = rb.velocity;
+		upVelocity.y = 20f;
+		rb.velocity = upVelocity;
+		
+		downForce = 0f;
 	}
 	
 	void OnGUI()
@@ -318,6 +342,25 @@ public class PlayerController : Photon.MonoBehaviour
 		if (timer >= staminaRecoveryPause)
 		{
 			recovering = true;
+		}
+	}
+	
+	protected virtual void Animate()
+	{
+		if (velocity < 1f)
+		{
+			anim.SetBool ("walking", false);
+			anim.SetBool ("running", false);
+		}
+		else if (velocity <= 4.5f)
+		{
+			anim.SetBool ("walking", true);
+			anim.SetBool ("running", false);
+		}
+		else
+		{
+			anim.SetBool ("walking", true);
+			anim.SetBool ("running", true);
 		}
 	}
 	
