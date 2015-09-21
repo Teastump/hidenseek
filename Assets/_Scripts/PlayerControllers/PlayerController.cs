@@ -85,6 +85,8 @@ public class PlayerController : Photon.MonoBehaviour
 	private float timer = 0f;
 	private bool recovering = false;
 	private float downForce = 1f;
+
+    private float sideMovement = 0;
 	
 	protected Animator anim;
 
@@ -119,6 +121,7 @@ public class PlayerController : Photon.MonoBehaviour
 			stream.SendNext (rb.velocity);
 			stream.SendNext (rb.rotation);
 			stream.SendNext (_stamina);
+            stream.SendNext(sideMovement);
 		} 
 		else 
 		{
@@ -126,6 +129,7 @@ public class PlayerController : Photon.MonoBehaviour
 			Vector3 syncVelocity = (Vector3)stream.ReceiveNext ();
 			Quaternion syncRotation = (Quaternion)stream.ReceiveNext ();
 			_stamina = (float) stream.ReceiveNext ();
+            sideMovement = (float)stream.ReceiveNext();
 
 			velocity = syncVelocity.magnitude;
 
@@ -185,6 +189,8 @@ public class PlayerController : Photon.MonoBehaviour
 		{
 			float forward = Input.GetAxisRaw ("Vertical");
 			float side = Input.GetAxisRaw ("Horizontal");
+
+            sideMovement = side;
 			
 			Vector3 moveDirNorm = ((transform.forward * forward) + (transform.right * side)).normalized;
 		
@@ -362,6 +368,22 @@ public class PlayerController : Photon.MonoBehaviour
 			anim.SetBool ("walking", true);
 			anim.SetBool ("running", true);
 		}
+
+        if (sideMovement > 0f)
+        {
+            anim.SetBool("left", false);
+            anim.SetBool("right", true);
+        }
+        else if (sideMovement < 0f)
+        {
+            anim.SetBool("left", true);
+            anim.SetBool("right", false);
+        }
+        else
+        {
+            anim.SetBool("left", false);
+            anim.SetBool("right", false);
+        }
 	}
 	
 }

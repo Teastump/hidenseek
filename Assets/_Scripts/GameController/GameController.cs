@@ -213,7 +213,7 @@ public class GameController : MonoBehaviour {
 				}
 			}
 		
-			MonsterWins ();
+			//MonsterWins ();
 		}
 	}
 	

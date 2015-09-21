@@ -44,11 +44,18 @@ public class MonsterController : PlayerController {
 			{
 				if (attackTimer >= attackSpeed && UseStamina (10f))
 				{
-					attackTimer = 0f;
-					attack.Attack (damage);
+					photonView.RPC ("RPCAttack", PhotonTargets.All, damage);
 					Debug.Log ("Swipe!");
 				}
 			}
 		}
+	}
+	
+	[PunRPC]
+	void RPCAttack(float damage)
+	{
+		attackTimer = 0f;
+		anim.SetTrigger ("attack");
+		attack.Attack (damage);
 	}
 }

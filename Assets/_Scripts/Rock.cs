@@ -39,18 +39,14 @@ public class Rock : MonoBehaviour {
 		if (bounces < maxBounces)
 		{
 			ContactPoint contact = coll.contacts[0];
-			Vector3 pos = contact.point + Vector3.up * 2;
+			Vector3 pos = contact.point; //+ Vector3.up * 2;
 			
-		
-			//if (GameController.instance.isMonster)
-			//{
 			GameObject rockSound = Instantiate (soundSource, pos, Quaternion.identity) as GameObject;
 			
 			SoundSource bounceSound = rockSound.GetComponent<SoundSource> ();
 			bounceSound.Init (coll.relativeVelocity.magnitude);
 			
 			Debug.Log ("Rock Collision Velocity: " + coll.relativeVelocity.magnitude);
-			//}
 		
 			++bounces;
 		}

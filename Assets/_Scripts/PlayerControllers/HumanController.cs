@@ -116,7 +116,7 @@ public class HumanController : PlayerController {
 			
 			Vector3 floorPos = rb.position;
 			floorPos.y -= (distToGround - 0.1f);
-			GameObject step = Instantiate (footstepSound, floorPos, rb.rotation) as GameObject;
+			GameObject step = Instantiate (footstepSound, rb.position, rb.rotation) as GameObject;
 			SoundSource footstep = step.GetComponent<SoundSource> ();
 			footstep.Init (velocity);
 		}

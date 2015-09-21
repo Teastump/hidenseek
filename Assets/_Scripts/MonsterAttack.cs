@@ -3,45 +3,54 @@ using System.Collections;
 
 public class MonsterAttack : MonoBehaviour {
 
-	private Collider hurtTrigger;
+	[SerializeField] Animator anim;
 	
-	private int attackFrames;
-	private int maxAttackFrames;
+	private PhotonView photonView;
+
+	private Collider hurtTrigger;
 	private float damage;
+	private int hits = 0;
+	
+	private bool hit;
 
 	// Use this for initialization
 	void Awake () 
 	{
+		photonView = anim.GetComponent<PhotonView> ();
 		hurtTrigger = GetComponent<Collider> ();
 		hurtTrigger.enabled = false;
-		
-		maxAttackFrames = 15;
 	}
 	
 	public void Attack (float damage)
 	{
 		this.damage = damage;
-		hurtTrigger.enabled = true;
-		attackFrames = 0;
+		hit = false;
 	}
 	
 	void OnTriggerEnter (Collider other)
 	{
-		if (other.CompareTag ("Human"))
+		if (other.CompareTag ("Human") && !hit)
 		{
+			hit = true;
+			++hits;
 			PlayerController hurtPlayer = other.GetComponent<PlayerController> ();
 			hurtPlayer.TakeDamage(damage);
+			
+			Debug.Log ("Hits: " + hits);
 		}
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () 
+	void Update () 
 	{
-		++attackFrames;
-		
-		if (attackFrames >= maxAttackFrames)
+		if (anim.GetCurrentAnimatorStateInfo(0).IsName("Attack") && photonView.isMine)
+		{
+			hurtTrigger.enabled = true;
+		}
+		else
 		{
 			hurtTrigger.enabled = false;
+			hits = 0;
 		}
 	}
 }
